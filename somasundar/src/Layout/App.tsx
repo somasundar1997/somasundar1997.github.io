@@ -1,10 +1,11 @@
 import React from 'react';
+import ComingSoon from '../Pages/ComingSoon';
 
 function App() {
   return (
-    <div>
-      Somasundar
-    </div>
+    <>
+    <ComingSoon />
+    </>
   );
 }
 
