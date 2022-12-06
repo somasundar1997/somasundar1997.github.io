@@ -24,6 +24,9 @@ jobs:
 #        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
     steps:
+    - name: Check Directory
+      run: pwd
+    - run: ls
     - name: Use Node.js  18.x #${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
