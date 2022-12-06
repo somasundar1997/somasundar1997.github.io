@@ -13,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+  
     defaults:
       run:
         working-directory: ./somasundar
@@ -24,13 +24,15 @@ jobs:
 #        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
     steps:
-    - name: Use Node.js  18.12.1 #${{ matrix.node-version }}
+    - name: Use Node.js  18.x #${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version:  18.12.1 #${{ matrix.node-version }}
+        node-version:  18.x #${{ matrix.node-version }}
         cache: 'npm'
-    - run: pwd
-    - run: ls
-    - run: npm install
-    - run: npm ci
-    - run: npm run build --if-present
+        
+    - name: Install Dependencies
+      run: |
+        cd ./somasundar
+        pwd
+        npm install
+        npm run build --if-present
