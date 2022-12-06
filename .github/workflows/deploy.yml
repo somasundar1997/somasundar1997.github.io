@@ -14,9 +14,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: somasundar/
+#    defaults:
+#      run:
+#        working-directory: somasundar/
         
 #    strategy:
 #      matrix:
@@ -24,7 +24,11 @@ jobs:
 #        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2.5.0
+    
     - run: ls
+    
     - name: Use Node.js  18.x #${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
