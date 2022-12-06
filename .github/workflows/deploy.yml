@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: somasundar
+        working-directory: somasundar/
         
 #    strategy:
 #      matrix:
