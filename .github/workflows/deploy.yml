@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./somasundar
+        working-directory: somasundar
         
 #    strategy:
 #      matrix:
@@ -32,7 +32,7 @@ jobs:
       with:
         node-version:  18.x #${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './somasundar/package-lock.json'
+        cache-dependency-path: 'somasundar/package-lock.json'
         
     - name: Install Dependencies
       run: |
